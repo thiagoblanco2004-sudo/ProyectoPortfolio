@@ -1,3 +1,17 @@
 * {
  font-family: "PT Sans", sans-serif; 
     }
+
+    header{
+background-image: url(../Imagenes/F100011964.jpg);
+background-position: center;
+height: 95vh;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+      }
+
+      main{
+background-color: rgb(6, 6, 81);
+        }
