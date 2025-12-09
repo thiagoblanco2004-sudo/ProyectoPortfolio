@@ -33,3 +33,12 @@ color: #fff;
 border: 1px solid #fff
 
             }
+
+            /* footer */
+
+            footer{
+background-image: url(./Imagenes/fondofooter.webp);
+background-repeat: no-repeat;
+background-size: cover;
+height: 6rem;
+                }
