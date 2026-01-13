@@ -12,6 +12,15 @@ background-size: cover;
 position: relative;
       }
 
+      footer{
+background-image: url(../Imagenes/fondofooter.webp);
+background-repeat: no-repeat;
+background-size: cover;
+height: 6rem;
+                }
+
       main{
-background-color: rgb(6, 6, 81);
+background-image: url(../Imagenes/F100011964.jpg);
         }
+
+      
