@@ -1,0 +1,369 @@
+// Variables de Audi
+$audi-red: #bb0a30;
+$audi-black: #000000;
+$audi-dark-gray: #1a1a1a;
+$audi-gray: #333333;
+$audi-light-gray: #f5f5f5;
+$audi-white: #ffffff;
+$font-primary: 'Oswald', sans-serif;
+$font-secondary: 'PT Sans', sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Reset y estilos generales
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-secondary;
+  color: $audi-gray;
+  overflow-x: hidden;
+}
+
+// Hero Section
+.audi-hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1603386329225-868f9b1ee6b9?w=1920');
+  @include background-cover;
+  position: relative;
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    
+    .navbar-brand {
+      font-family: $font-primary;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      color: $audi-white !important;
+    }
+    
+    .nav-link {
+      color: rgba(255, 255, 255, 0.85) !important;
+      font-family: $font-primary;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 10px;
+      @include transition(color);
+      
+      &:hover,
+      &.active {
+        color: $audi-white !important;
+      }
+    }
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $audi-white;
+    
+    .hero-title {
+      font-family: $font-primary;
+      font-size: 6rem;
+      font-weight: 700;
+      letter-spacing: 15px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+      
+      @media (max-width: 768px) {
+        font-size: 3rem;
+        letter-spacing: 8px;
+      }
+    }
+    
+    .hero-subtitle {
+      font-family: $font-secondary;
+      font-size: 1.5rem;
+      font-style: italic;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+      
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+    
+    .btn {
+      padding: 15px 40px;
+      font-family: $font-primary;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      @include transition(all);
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+// Section Title
+.section-title {
+  font-family: $font-primary;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $audi-black;
+  position: relative;
+  padding-bottom: 20px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: $audi-red;
+  }
+}
+
+// Modelos Section
+.modelos-section {
+  background-color: $audi-light-gray;
+  
+  .modelo-card {
+    background: $audi-white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    @include transition(transform);
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .modelo-image {
+      height: 250px;
+      @include background-cover;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+      }
+    }
+    
+    .modelo-info {
+      .modelo-name {
+        font-family: $font-primary;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $audi-black;
+        margin-bottom: 15px;
+      }
+      
+      .modelo-description {
+        color: $audi-gray;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      
+      .modelo-specs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        
+        .spec {
+          background-color: $audi-light-gray;
+          padding: 8px 15px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          color: $audi-gray;
+        }
+      }
+      
+      .btn {
+        font-family: $font-primary;
+        letter-spacing: 1px;
+        @include transition(all);
+        
+        &:hover {
+          background-color: $audi-red !important;
+          border-color: $audi-red !important;
+        }
+      }
+    }
+  }
+}
+
+// Tecnología Section
+.tecnologia-section {
+  background-color: $audi-white;
+  
+  .tech-card {
+    background: linear-gradient(135deg, $audi-light-gray 0%, $audi-white 100%);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    @include transition(all);
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .tech-icon {
+      font-size: 4rem;
+    }
+    
+    .tech-title {
+      font-family: $font-primary;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $audi-black;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    
+    .tech-description {
+      color: $audi-gray;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Contacto Section
+.contacto-section {
+  .section-title {
+    color: $audi-white;
+    
+    &::after {
+      background: $audi-white;
+    }
+  }
+  
+  .contacto-form {
+    .form-label {
+      font-family: $font-primary;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    
+    .form-control,
+    .form-select {
+      padding: 12px;
+      border-radius: 5px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $audi-white;
+      @include transition(all);
+      
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: $audi-white;
+        color: $audi-white;
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+      }
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    
+    .form-select {
+      option {
+        background-color: $audi-dark-gray;
+        color: $audi-white;
+      }
+    }
+    
+    .btn {
+      font-family: $font-primary;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px;
+      @include transition(all);
+      
+      &:hover {
+        background-color: $audi-red !important;
+        border-color: $audi-red !important;
+        color: $audi-white !important;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  font-family: $font-secondary;
+  
+  p {
+    margin: 0;
+    
+    &:first-child {
+      font-size: 0.9rem;
+    }
+    
+    em {
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .modelo-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content {
+    .hero-title {
+      font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+}
