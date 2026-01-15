@@ -1,0 +1,291 @@
+/* Compilado desde SCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.audi-hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1603386329225-868f9b1ee6b9?w=1920");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.audi-hero .navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+.audi-hero .navbar .navbar-brand {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #ffffff !important;
+}
+.audi-hero .navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+.audi-hero .navbar .nav-link:hover, .audi-hero .navbar .nav-link.active {
+  color: #ffffff !important;
+}
+.audi-hero .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+.audi-hero .hero-content .hero-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 15px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+  .audi-hero .hero-content .hero-title {
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+}
+.audi-hero .hero-content .hero-subtitle {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+  .audi-hero .hero-content .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+.audi-hero .hero-content .btn {
+  padding: 15px 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.audi-hero .hero-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  padding-bottom: 20px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #bb0a30;
+}
+
+.modelos-section {
+  background-color: #f5f5f5;
+}
+.modelos-section .modelo-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+.modelos-section .modelo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+.modelos-section .modelo-card .modelo-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.modelos-section .modelo-card .modelo-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+.modelos-section .modelo-card .modelo-info .modelo-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.modelos-section .modelo-card .modelo-info .modelo-description {
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.modelos-section .modelo-card .modelo-info .modelo-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.modelos-section .modelo-card .modelo-info .modelo-specs .spec {
+  background-color: #f5f5f5;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #333333;
+}
+.modelos-section .modelo-card .modelo-info .btn {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+.modelos-section .modelo-card .modelo-info .btn:hover {
+  background-color: #bb0a30 !important;
+  border-color: #bb0a30 !important;
+}
+
+.tecnologia-section {
+  background-color: #ffffff;
+}
+.tecnologia-section .tech-card {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+.tecnologia-section .tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.tecnologia-section .tech-card .tech-icon {
+  font-size: 4rem;
+}
+.tecnologia-section .tech-card .tech-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.tecnologia-section .tech-card .tech-description {
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contacto-section .section-title {
+  color: #ffffff;
+}
+.contacto-section .section-title::after {
+  background: #ffffff;
+}
+.contacto-section .contacto-form .form-label {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.contacto-section .contacto-form .form-control,
+.contacto-section .contacto-form .form-select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.contacto-section .contacto-form .form-control:focus,
+.contacto-section .contacto-form .form-select:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+}
+.contacto-section .contacto-form .form-control::placeholder,
+.contacto-section .contacto-form .form-select::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contacto-section .contacto-form .form-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.contacto-section .contacto-form .btn {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.contacto-section .contacto-form .btn:hover {
+  background-color: #bb0a30 !important;
+  border-color: #bb0a30 !important;
+  color: #ffffff !important;
+}
+
+.footer {
+  font-family: "PT Sans", sans-serif;
+}
+.footer p {
+  margin: 0;
+}
+.footer p:first-child {
+  font-size: 0.9rem;
+}
+.footer p em {
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .modelo-card {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .hero-content .hero-title {
+    font-size: 3rem;
+  }
+  .hero-content .hero-subtitle {
+    font-size: 1rem;
+  }
+}
