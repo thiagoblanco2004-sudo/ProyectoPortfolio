@@ -1,33 +1,117 @@
-* {
- font-family: "PT Sans", sans-serif; 
-    }
+.page-hero {
+  background-image: url(../Imagenes/F100011964.jpg);
+  background-position: center;
+  min-height: 50vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-    header{
-background-image: url(../Imagenes/F100011964.jpg);
-background-position: center;
-height: 95vh;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-      }
+.about-main {
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 1));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 4rem 1.5rem 4rem;
+}
 
-      footer{
-background-image: url(../Imagenes/fondofooter.webp);
-background-repeat: no-repeat;
-background-size: cover;
-height: 6rem;
-                }
+.about-card {
+  max-width: 760px;
+  margin: -5rem auto 3rem;
+  border-radius: var(--radius-lg);
+  border: none;
+}
 
-      main{
-background-image: url(../Imagenes/F100011964.jpg);
-        }
+.content-section {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-        /* main */
+.section-text {
+  color: #f0f0f0;
+  padding: 0 1.5rem 2rem;
+  text-align: center;
+}
 
-        .div-proyectos{
-width: 90%;
-height: 60vh;
-            }
+.contact-card {
+  max-width: 720px;
+  margin-top: -4rem;
+}
+
+.contact-page {
+  background-image: url(../Imagenes/F100011964.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact-page .about-main {
+  background: rgba(15, 15, 15, 0.82);
+}
+
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-block {
+  background: #f6f2ec;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.contact-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-text {
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.contact-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .page-hero {
+    background-attachment: scroll;
+  }
+
+  .about-card {
+    margin: -3rem 1rem 2rem;
+  }
+
+  .content-section {
+    margin: 2rem 1rem;
+  }
+
+  .section-text {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .contact-card {
+    margin-top: -3rem;
+  }
+}
+
+footer{
+  background-image: url(../Imagenes/fondofooter.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 6rem;
+}
 
       

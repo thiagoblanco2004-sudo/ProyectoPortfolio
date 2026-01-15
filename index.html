@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoPortfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-    <header>
+    <header class="hero">
         <div class="position-absolute w-100 h-100 fondo-oscuro">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Thiago Blanco</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +27,10 @@
           <a class="nav-link" href="./pages/sobre-mi.html">Sobre mi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Proyectos</a>
+          <a class="nav-link" href="#proyectos">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="./pages/contacto.html">Contacto</a>
         </li>
 
         
@@ -43,27 +40,33 @@
   </div>
 </nav>
 <section class="contenedor-header d-flex flex-column align-items-center justify-content-center h-100">
-<h1 class="text-white d-flex flex-column align-items-center">Thiago Blanco <span class="fw-ligth">Desarrolador web</span></h1>
-<button class="btn-header">Descargar CV</button>
+<h1 class="text-white d-flex flex-column align-items-center">Thiago Blanco <span class="fw-light">Desarrollador web</span></h1>
+<button class="btn-header" type="button">Descargar CV</button>
 </section>
 </div>
     </header>
 
-    <main>
-        <h2 class="text-decoration-underline link-offset-3 mb-3">Mis proyectos</h2>
+    <main id="proyectos" class="main-content">
+        <h2 class="section-title">Mis proyectos</h2>
 <a href="./proyectopaises/paises.html">
-        <section class="mx-auto shadow rounded my-3 xl:height h-30" style="background-image: url(./Imagenes/Banderaargentina.png); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <section class="project-card project-card-flag shadow rounded my-3" style="background-image: url(./Imagenes/Flag_of_Argentina.svg);" aria-label="Proyecto Países">
         <h3 class="text-center fw-bold fs-2 py-5 text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7); letter-spacing: 1px;">Proyecto Países</h3>
         </section>
         </a>
 
-        <section class="mx-auto shadow rounded my-3" style="background-image: url(./Imagenes/fondoaudi.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <section class="project-card project-card-audi shadow rounded my-3" style="background-image: url(./Imagenes/fondoaudi.jpg);">
         <h3 class="text-center text-white fw-bold fs-2 py-5" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7); letter-spacing: 1px;">Proyecto Audi</h3>
         </section>
+
+        <a href="./pages/contacto.html">
+        <section class="project-card project-card-contacto shadow rounded my-3" aria-label="Contacto">
+        <h3 class="text-center text-white fw-bold fs-2 py-5" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7); letter-spacing: 1px;">Contacto</h3>
+        </section>
+        </a>
     </main>
 
-<footer class="d-flex align-items-center justify-content-center">
-   <h4 class="text-white d-flex flex-column align-items-center">Thiago Blanco <span class="fw-ligth">Desarrolador web</span></h4> 
+<footer id="contacto" class="d-flex align-items-center justify-content-center">
+   <h4 class="text-white d-flex flex-column align-items-center">Thiago Blanco <span class="fw-light">Desarrollador web</span></h4> 
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
