@@ -1,0 +1,16 @@
+*{ 
+    font-family: "PT Sans", sans-serif !important;
+
+}
+
+.card-pais{
+max-width: 20rem;
+background-color: rgb(164, 223, 223);
+    }
+  
+    .card-paises{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        }

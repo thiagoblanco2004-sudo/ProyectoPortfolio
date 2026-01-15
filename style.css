@@ -1,5 +1,5 @@
 * {
- font-family: "PT Sans", sans-serif; 
+ font-family: "Roboto", sans-serif !important; 
     }
 
     /* header */
@@ -42,3 +42,20 @@ background-repeat: no-repeat;
 background-size: cover;
 height: 6rem;
                 }
+
+
+                /* main */
+
+             .div-proyectos{
+width: 90%;
+height: 60vh;
+            }
+
+            @media (min-width:1000px)  {
+                .div-proyectos{
+width: 90%;
+height: auto;
+                
+            }
+            }
+
